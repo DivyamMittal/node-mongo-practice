@@ -3,7 +3,9 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_URL).then(()=>{
+const mongoUrl = process.env.MONGO_URL;
+
+mongoose.connect(mongoUrl).then(()=>{
     // console.log("Connection successfull");
 }).catch((err) =>{
     // console.log("Error :- ",err);
