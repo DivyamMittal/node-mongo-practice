@@ -16,7 +16,7 @@ router.post('/register', async (req, resp) => {
         resp.status(201).send({ "status": 200, "message": "Account created successfully" });
     }
     catch (e) {
-        console.log("Error : ", e);
+        // console.log("Error : ", e);
         resp.status(400).send({ "status": 400, "message": "Account already exists" });
     }
 });
@@ -52,7 +52,7 @@ router.post('/login', async (req, resp) => {
        return resp.status(200).json({ "status": 200, "message": "Login succesfull", "data": {...others,accessToken }});
     }
     catch (e) {
-        console.log("Error : ", e);
+        // console.log("Error : ", e);
         resp.status(500).send({ "status": 400, "message": "Internal Server error" });
     }
 });

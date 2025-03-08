@@ -13,6 +13,5 @@ app.use('/api',userRouter);
 app.use('/api/users',user);
 
 app.listen(process.env.PORT, ()=> {
-    console.log("listenting to port");
 })
 
