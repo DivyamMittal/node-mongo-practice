@@ -12,7 +12,7 @@ app.use(express.json());
 app.use('/api',userRouter);
 app.use('/api/users',user);
 
-app.listen(5001, ()=> {
+app.listen(process.env.PORT, ()=> {
     console.log("listenting to port");
 })
 

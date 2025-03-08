@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 
+dotenv.config();
 
-mongoose.connect("mongodb://localhost:27017/chatting-app-db").then(()=>{
+mongoose.connect(process.env.MONGO_URL).then(()=>{
     console.log("Connection successfull");
 }).catch((err) =>{
     console.log("Error :- ",err);
